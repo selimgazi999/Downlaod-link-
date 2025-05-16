@@ -1,6 +1,6 @@
 {
-  "name": "Download Post Generator",
-  "short_name": "LinkGen",
+  "name": "DPG 2",
+  "short_name": "LinkGen2",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#111",
