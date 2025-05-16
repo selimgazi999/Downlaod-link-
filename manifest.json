@@ -1,0 +1,20 @@
+{
+  "name": "Download Post Generator",
+  "short_name": "LinkGen",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#111",
+  "theme_color": "#00ffee",
+  "icons": [
+    {
+      "src": "https://i.postimg.cc/cLSgMJG2/images-2.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://i.postimg.cc/cLSgMJG2/images-2.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
