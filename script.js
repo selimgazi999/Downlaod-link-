@@ -17,68 +17,79 @@ document.getElementById('movieForm').addEventListener('submit', function (e) {
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
+      font-size: 14px;
     }
     header {
       background-color: #222;
-      padding: 20px 10px;
+      padding: 16px 10px;
       text-align: center;
-      font-size: 36px;
+      font-size: 28px;
       font-weight: bold;
-      color: #0ff;
+      color: #f1c40f;
       text-shadow: 1px 1px 4px rgba(0, 255, 255, 0.6);
     }
+    
     .notice {
-      background-color: #1e1e1e;
-      border: 1px solid #0ff;
-      border-left: 5px solid #0ff;
-      padding: 15px;
-      margin: 20px auto;
-      border-radius: 8px;
-      max-width: 800px;
-      font-size: 15px;
-      line-height: 1.6;
-      color: #eee;
-      box-shadow: 0 0 6px rgba(0, 255, 255, 0.08);
-      position: relative;
-    }
-    .notice::before {
-      content: "NOTICE";
-      position: absolute;
-      top: -10px;
-      left: 12px;
-      background-color: #0ff;
-      color: #000;
-      font-weight: bold;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-size: 12px;
-      box-shadow: 0 0 4px rgba(0, 255, 255, 0.2);
-    }
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* ডার্ক গ্রেডিয়েন্ট */
+  color: #f1c40f; /* গ্লো টাইপ গোল্ডেন কালার */
+  padding: 16px 30px;
+  border-left: 5px solid #f39c12;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: left;
+  box-shadow: 0 0 12px rgba(241, 196, 15, 0.4);
+  margin: 25px 0;
+  animation: slideGlow 5s infinite;
+  position: relative;
+}
+
+.notice::before {
+  content: "⚡ Notice";
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  background: #f39c12;
+  color: #000;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+@keyframes slideGlow {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(241, 196, 15, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(241, 196, 15, 0.7);
+  }
+}
     .section-title {
       background-color: #333;
-      margin: 15px auto;
-      padding: 12px;
-      font-size: 20px;
+      margin: 12px auto 6px;
+      padding: 10px;
+      font-size: 16px;
       font-weight: bold;
       border-radius: 6px;
       text-align: center;
       color: #fff;
       max-width: 600px;
-      box-shadow: 1px 1px 5px rgba(0, 255, 255, 0.25);
+      box-shadow: 1px 1px 4px rgba(0, 255, 255, 0.2);
     }
     .quality-block {
-      margin: 15px auto;
-      padding: 20px;
+      margin: 12px auto;
+      padding: 16px;
       background-color: #1a1a1a;
-      border-radius: 8px;
+      border-radius: 6px;
       max-width: 600px;
       text-align: center;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     }
     .quality-title {
-      font-size: 18px;
-      margin-bottom: 8px;
-      color: #0ff;
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: #f1c40f;
       font-weight: bold;
       text-transform: uppercase;
     }
@@ -86,31 +97,89 @@ document.getElementById('movieForm').addEventListener('submit', function (e) {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 8px;
+      gap: 8px;
+      margin-top: 6px;
     }
     .link-group a {
-      background-color: #0ff;
+      background-color: #f1c40f;
       color: #000;
-      padding: 10px 16px;
+      padding: 8px 14px;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 5px;
       font-weight: bold;
-      min-width: 90px;
-      font-size: 14px;
+      min-width: 80px;
+      font-size: 12px;
       transition: background 0.3s, transform 0.2s;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     }
     .link-group a:hover {
-      background-color: #00bcd4;
+      background-color: #f1c40f;
+      transform: translateY(-2px);
+    }
+    .watch-now {
+      text-align: center;
+      margin-top: 8px;
+      margin-bottom: 16px;
+    }
+    .watch-now a {
+      background-color: #f1c40f;
+      color: #000;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      box-shadow: 0 3px 6px rgba(0,255,255,0.3);
+      transition: 0.3s;
+      display: inline-block;
+    }
+    .watch-now a:hover {
+      background-color: #f1c40f;
       transform: translateY(-2px);
     }
     footer {
       text-align: center;
-      padding: 18px;
+      padding: 14px;
       background-color: #222;
       color: #999;
-      font-size: 14px;
+      font-size: 12px;
+    }
+    .footer-icons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 1000;
+    }
+    .footer-icons .icon {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+    .footer-icons .icon:hover {
+      transform: translateY(-4px) scale(1.05);
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      cursor: pointer;
+    }
+    .footer-icons .movie-request {
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    }
+    .footer-icons .telegram {
+      background: linear-gradient(135deg, #1c92d2, #f2fcfe);
+      color: #0088cc;
     }
   </style>
 </head>
@@ -119,18 +188,17 @@ document.getElementById('movieForm').addEventListener('submit', function (e) {
 <header>DOWNLOAD</header>
 
 <div class="notice">
-  <strong>Fast Download</strong> আপনার নেট স্পিড এর উপর নির্ভর করে। অতিরিক্ত ভিজিটরের কারণে যদি ওয়ান ক্লিক <strong>GDrive-1, 2, 3</strong> থেকে ডাউনলোড না হয়, তাহলে অন্যান্য <strong>২-টি অপশন</strong> <strong>GDTOT</strong> ও <strong>FilePress</strong> নিচে দেওয়া আছে ঐ গুলো দিয়ে ডাউনলোড করবেন। টেকনিক্যাল সমস্যায় সব লিংক কাজ না করলে রি-আপলোড <strong>রিকোয়েস্ট</strong> করুন। রিকোয়েস্টের আগে টেলিগ্রাম চ্যানেলের পিন পোস্টটি দেখে নিন।
+  <strong>Watch Now </strong> বাটনে ক্লিক করে দেখতে চাইলে, আপনার ইন্টারনেট স্পিড ভালো হতে হবে, না হলে ভিডিও Play হবে না। ভালো অভিজ্ঞতার জন্য হাই-স্পিড নেটওয়ার্ক ব্যবহার করুন অথবা ডাউনলোড করে দেখুন ।
 </div>
 
 <div class="section-title">${getVal('titlemain')}</div>
 
-<div class="notice" style="border-left-color: #0f0; border-color: #0f0; box-shadow: 0 0 8px rgba(0, 255, 0, 0.2);">
-  <strong style="color: #0f0;">দ্রুত অনলাইন স্ট্রিমিং:</strong> 
-  আপনি চাইলে মুভিটি সরাসরি <strong style="color:#0f0;">GDTOT</strong> থেকে অনলাইনে দেখতে পারেন। এটি সবচেয়ে সহজ ও দ্রুত মাধ্যম!
+<div class="watch-now">
+  <a href="${getVal('watchlink')}">▶ Watch Now</a>
 </div>
 
 <div class="quality-block">
-  <div class="quality-title">Quality - ${getVal('480psize')}</div>
+  <div class="quality-title">Quality - 480P / ${getVal('480psize')}</div>
   <div class="link-group">
     <a href="${getVal('480pgdrive1')}">GDrive-1</a>
     <a href="${getVal('480pgdrive2')}">GDrive-2</a>
@@ -143,7 +211,7 @@ document.getElementById('movieForm').addEventListener('submit', function (e) {
 </div>
 
 <div class="quality-block">
-  <div class="quality-title">Quality - ${getVal('720psize')}</div>
+  <div class="quality-title">Quality - 720P</div>
   <div class="link-group">
     <a href="${getVal('720pgdrive1')}">GDrive-1</a>
     <a href="${getVal('720pgdrive2')}">GDrive-2</a>
@@ -156,7 +224,7 @@ document.getElementById('movieForm').addEventListener('submit', function (e) {
 </div>
 
 <div class="quality-block">
-  <div class="quality-title">Quality - ${getVal('1080psize')}</div>
+  <div class="quality-title">1080P</div>
   <div class="link-group">
     <a href="${getVal('1080pgdrive1')}">GDrive-1</a>
     <a href="${getVal('1080pgdrive2')}">GDrive-2</a>
@@ -180,8 +248,8 @@ document.getElementById('movieForm').addEventListener('submit', function (e) {
   &copy; 2025 Movie Flix. All rights reserved.
 </footer>
 
-<script type='text/javascript' src='//pl26617835.profitableratecpm.com/77/3c/a3/773ca361f43fb0dd73a8d82e3bae0ae8.js'></script>
-  <!-- Footer Icons -->
+<script type='text/javascript' src='//pl26610874.profitableratecpm.com/b0/80/37/b080376e2e859f6c371b8dbef6b33fbf.js'></script>
+
 <div class="footer-icons">
   <a href="https://movieflix9.netlify.app/movie-request" class="icon movie-request" title="Request a Movie">
     <i class="fas fa-film"></i>
@@ -191,54 +259,7 @@ document.getElementById('movieForm').addEventListener('submit', function (e) {
   </a>
 </div>
 
-<!-- Font Awesome for icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<!-- Stylish CSS -->
-<style>
-.footer-icons {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  z-index: 1000;
-}
-
-.footer-icons .icon {
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #fff;
-  width: 60px;
-  height: 60px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 26px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-}
-
-.footer-icons .icon:hover {
-  transform: translateY(-5px) scale(1.05);
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-  cursor: pointer;
-}
-
-.footer-icons .movie-request {
-  background: linear-gradient(135deg, #ff416c, #ff4b2b);
-}
-
-.footer-icons .telegram {
-  background: linear-gradient(135deg, #1c92d2, #f2fcfe);
-  color: #0088cc;
-}
-</style>
-
 </body>
 </html>
 `.trim();
